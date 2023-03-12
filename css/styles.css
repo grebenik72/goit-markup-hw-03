@@ -15,18 +15,59 @@ list-style: none;
     text-decoration: none;
 }
 
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+h1,h2,h3,h4,p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+img {
+    display: block;
+}
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* border: 1px solid tomato; */
+}
 
 /*==============header============= */
-
+.header-container{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--fotter-text-color);
+}
+.page-nav{
+    display: flex;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    
+}
+.menu-nav:not(:last-child){
+    margin-right: 40px;
+}
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
-    line-height: 1.5;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--logo-color)
+    color: var(--logo-color);
+    margin-right: 76px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 156px;
 }
 .header-logo {
     color:var(--secondary-color);
@@ -37,14 +78,21 @@ list-style: none;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondary-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
+
 .menu-link:hover,
 .menu-link:focus {
     color: var(--accent-color);
 }
+.menu-nav {
+    margin-right: 40px;
+}
 
 .contacts {
         font-style:normal;
+        margin-left: auto;
         }
 .contacts-menu {
     font-style: normal;
@@ -52,10 +100,23 @@ list-style: none;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .contacts-menu:hover,
 .contacts-menu:focus {
     color: var(--accent-color);
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+}
+.e-mail {
+    margin-right: 40px;
+}
+
+button{
+    cursor: pointer;
 }
 
 /*=============== body============ */
@@ -64,10 +125,17 @@ body {
         color: var(--primary-text-color);
 }
 .hero-section {
+    height: 600px;
     background-color: var(--secondary-color);
+    text-align: center;
 }
+
 .section-team {
     background-color: var(--footter-logo-color);
+    text-align: center;
+}
+.section-rectangle{
+    text-align: center;
 }
 .modal-btn {
         font-family: inherit;
@@ -75,9 +143,13 @@ body {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.04em;
-        cursor: pointer;
         background-color: var(--logo-color);
         color:var(--main-titel-color);
+        padding-bottom: 188px;
+        padding: 16px 32px;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -89,40 +161,60 @@ background-color: var(--accent-color);
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.04em;
-        cursor: pointer;
         color: var(--logo-color);
+        border: 1px solid var(--fotter-text-color);
+        border-radius: 4px;
 }
 .filter-btn-activ:hover,
 .filter-btn-activ:hover{
     color: var(--main-titel-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filter-btn{
+    display: flex;
+    margin-bottom: 72px;
+    padding-left: 427px;
+    gap: 24px;
 }
 .main-title {
         font-weight: 700;
         font-size: 56px;
         line-height: 1.07;
-        text-align: center;
         letter-spacing: 0.02em;
         color:var(--main-titel-color);
+        width: 496px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 188px;
+        padding-bottom: 48px;
+        
 }
 .section-title {
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
-        text-align: center;
         letter-spacing: 0.02em;
         color:var(--secondary-color);
 }
-.rectangle-title, 
+.rectangle-title,
 .team-title
  {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
-    text-align: center;
     text-transform: capitalize;
     color: var(--secondary-color);
+    margin-bottom: 72px;
+}
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.feature-page {
+    display: flex;
+    gap: 24px;
 }
 .feature-title {
         font-weight: 500;
@@ -131,6 +223,7 @@ background-color: var(--accent-color);
         text-transform: capitalize;
         letter-spacing: 0.02em;
         color: var(--secondary-color);
+        margin-bottom: 8px;
 }
 .feature,
 .team-text {
@@ -139,18 +232,53 @@ background-color: var(--accent-color);
         letter-spacing: 0.02em;
         color: var(--primary-text-color);
 }
+.rectangle-page {
+    display: flex;
+    gap: 24px;
+   
+}
+.team-page {
+    display: flex;
+    gap: 24px;
+  
+}
+.projects-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+.projects-card-item {
+    border: 1px solid var(--fotter-text-color);
+    width: calc((100% - 48px) / 3);
+}
+
 .card-title {
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
         color:var(--secondary-color);
+        margin-bottom: 8px;
+       
+}
+
+.card-data {
+    margin-top: 32px;
+
 }
 .card-text {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--primary-text-color);
+        
+}
+.card-border{
+    margin-top: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
 }
 
 /*================= body ==============*/
@@ -158,12 +286,19 @@ background-color: var(--accent-color);
 .footer-color {
     background-color:var(--secondary-color);
 }
+.footter-logo {
+    color: var(--footter-logo-color);
+}
+.fotter-page {
+    padding-top: 100px;
+    margin-bottom: 16px; 
+}
 .fotter-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color:var(--fotter-text-color);
-}
-.footter-logo {
-    color: var(--footter-logo-color);
+    color: var(--fotter-text-color);
+    width: 420px;
+    padding-left: 156px;
+    padding-bottom: 100px;
 }
