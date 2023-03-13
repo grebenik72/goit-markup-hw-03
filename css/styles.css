@@ -35,27 +35,41 @@ img {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    
     /* border: 1px solid tomato; */
+    /* background-color: tomato; */
 }
 
 /*==============header============= */
-.header-container{
+.header-page {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--fotter-text-color);
+
+}
+
+.header-container {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--fotter-text-color);
+   
 }
 .page-nav{
     display: flex;
     align-items: center;
 }
-.menu{
+.menu {
     display: flex;
     align-items: center;
     
 }
-.menu-nav:not(:last-child){
+.menu-nav {
     margin-right: 40px;
 }
+
+.menu-nav:last-child {
+    margin-right: 0;
+}
+
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -65,9 +79,7 @@ img {
     text-transform: uppercase;
     color: var(--logo-color);
     margin-right: 76px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 156px;
+    padding-left: 15px;
 }
 .header-logo {
     color:var(--secondary-color);
@@ -78,16 +90,11 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondary-color);
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .menu-link:hover,
 .menu-link:focus {
     color: var(--accent-color);
-}
-.menu-nav {
-    margin-right: 40px;
 }
 
 .contacts {
@@ -100,8 +107,6 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 .contacts-menu:hover,
 .contacts-menu:focus {
@@ -123,9 +128,12 @@ button{
 body {
        font-family: "Roboto", sans-serif;
         color: var(--primary-text-color);
+        min-width: 1440px;
 }
 .hero-section {
     height: 600px;
+    padding-top: 188px;
+    padding-bottom: 188px;
     background-color: var(--secondary-color);
     text-align: center;
 }
@@ -135,8 +143,19 @@ body {
     text-align: center;
 }
 .section-rectangle{
+    padding-bottom: 120px;
     text-align: center;
 }
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.section-projects {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
 .modal-btn {
         font-family: inherit;
         font-weight: 500;
@@ -145,16 +164,30 @@ body {
         letter-spacing: 0.04em;
         background-color: var(--logo-color);
         color:var(--main-titel-color);
-        padding-bottom: 188px;
         padding: 16px 32px;
+        border: none;
         border-radius: 4px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         
 }
 .modal-btn:hover,
 .modal-btn:focus {
 background-color: var(--accent-color); 
 }
+
+.filter-btn {
+    /* width: 586px; */
+    height: 48px;
+    display: flex;
+    justify-content:center;
+    padding-left: 290px;
+    padding-right: 290px;
+    margin-bottom: 72px;
+    gap: 24px;
+}
+.filter-btn-item {
+    width: calc((100% - 96px) / 5);
+}
+
 .filter-btn-activ {
         font-family: inherit;
         font-weight:500;
@@ -164,6 +197,7 @@ background-color: var(--accent-color);
         color: var(--logo-color);
         border: 1px solid var(--fotter-text-color);
         border-radius: 4px;
+
 }
 .filter-btn-activ:hover,
 .filter-btn-activ:hover{
@@ -171,12 +205,9 @@ background-color: var(--accent-color);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.filter-btn{
-    display: flex;
-    margin-bottom: 72px;
-    padding-left: 427px;
-    gap: 24px;
-}
+
+
+
 .main-title {
         font-weight: 700;
         font-size: 56px;
@@ -186,8 +217,7 @@ background-color: var(--accent-color);
         width: 496px;
         margin-right: auto;
         margin-left: auto;
-        padding-top: 188px;
-        padding-bottom: 48px;
+        margin-bottom: 48px;
         
 }
 .section-title {
@@ -208,13 +238,25 @@ background-color: var(--accent-color);
     color: var(--secondary-color);
     margin-bottom: 72px;
 }
-.section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
+
 .feature-page {
     display: flex;
     gap: 24px;
+}
+.feature-page-item {
+width: calc((100% - 72px) / 4);
 }
 .feature-title {
         font-weight: 500;
@@ -237,10 +279,27 @@ background-color: var(--accent-color);
     gap: 24px;
    
 }
+.rectangle-page-item {
+    width: calc((100% - 48px) / 3);
+}
+
 .team-page {
     display: flex;
     gap: 24px;
   
+}
+.team-page-item {
+    width: calc((100% - 72px) / 4);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 0px 0px 4px 4px;
+}
+
+.card-border {
+    margin-top: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
+   
 }
 .projects-card {
     display: flex;
@@ -250,6 +309,8 @@ background-color: var(--accent-color);
 .projects-card-item {
     border: 1px solid var(--fotter-text-color);
     width: calc((100% - 48px) / 3);
+    padding-bottom: 32px;
+    border-style:none solid solid solid;
 }
 
 .card-title {
@@ -261,7 +322,6 @@ background-color: var(--accent-color);
         margin-bottom: 8px;
        
 }
-
 .card-data {
     margin-top: 32px;
 
@@ -273,13 +333,7 @@ background-color: var(--accent-color);
         color: var(--primary-text-color);
         
 }
-.card-border{
-    margin-top: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
-}
+
 
 /*================= body ==============*/
 /* =======footer===== */
@@ -290,15 +344,16 @@ background-color: var(--accent-color);
     color: var(--footter-logo-color);
 }
 .fotter-page {
+    height: 310px;
     padding-top: 100px;
-    margin-bottom: 16px; 
+    padding-bottom: 100px;
 }
 .fotter-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--fotter-text-color);
-    width: 420px;
-    padding-left: 156px;
-    padding-bottom: 100px;
+    width: 279px;
+    padding-left: 15px;
+    
 }
