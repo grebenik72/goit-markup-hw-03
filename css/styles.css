@@ -339,16 +339,15 @@ width: calc((100% - 72px) / 4);
 
 /*================= body ==============*/
 /* =======footer===== */
-.footer-color {
+.footer {
     background-color:var(--secondary-color);
+    padding-top: 100px;
+        padding-bottom: 100px;
 }
-.footter-logo {
+.footer-logo {
     color: var(--footter-logo-color);
 }
-.fotter-page {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
+
 
 .fotter-text {
     font-size: 16px;
@@ -357,4 +356,7 @@ width: calc((100% - 72px) / 4);
     color: var(--fotter-text-color);
     width: 279px;
     margin-top: 16px;
+}
+.logo-footer {
+    margin: 0;
 }
