@@ -37,7 +37,7 @@ img {
     padding-right: 15px;
     
     /* border: 1px solid tomato; */
-    /* background-color: tomato; */
+    
 }
 
 /*==============header============= */
@@ -62,9 +62,6 @@ img {
     align-items: center;
     
 }
-.menu-nav:first-child {
-    margin-left: 76px;
-}
 
 .menu-nav {
     margin-right: 40px;
@@ -82,6 +79,7 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--logo-color);
+    margin-right: 76px;
 }
 .header-logo {
     color:var(--secondary-color);
@@ -132,9 +130,7 @@ body {
         color: var(--primary-text-color);
         
 }
-.page {
-    width: 1440px;
-}
+
 .hero-section {
     height: 600px;
     padding-top: 188px;
@@ -187,10 +183,6 @@ background-color: var(--accent-color);
     justify-content: center;
     margin-bottom: 72px;
     gap: 24px;
-}
-
-.filter-btn-item {
-    /* width: calc((100% - 96px) / 5); */
 }
 
 .filter-btn-activ {
@@ -317,8 +309,6 @@ width: calc((100% - 72px) / 4);
 .projects-card-item {
     
     width: calc((100% - 48px) / 3);
-    padding-bottom: 32px;
-    /* border-style:none solid solid solid; */
 }
 
 .card-title {
@@ -359,11 +349,12 @@ width: calc((100% - 72px) / 4);
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .fotter-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--fotter-text-color);
     width: 279px;
-    
+    margin-top: 16px;
 }
